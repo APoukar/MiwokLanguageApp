@@ -17,6 +17,9 @@ package com.example.android.miwok;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
+
+import java.util.ArrayList;
 
 public class NumbersActivity extends AppCompatActivity {
 
@@ -25,17 +28,17 @@ public class NumbersActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_numbers);
 
-        String[] englishNumbers = new String[10];
-
-        englishNumbers[0] = "one";
-        englishNumbers[1] = "two";
-        englishNumbers[2] = "three";
-        englishNumbers[3] = "four";
-        englishNumbers[4] = "five";
-        englishNumbers[5] = "six";
-        englishNumbers[6] = "seven";
-        englishNumbers[7] = "eight";
-        englishNumbers[8] = "nine";
-        englishNumbers[9] = "ten";
+        ArrayList<String> englishNumbers = new ArrayList<String>();
+        englishNumbers.add("One");
+        englishNumbers.add("Two");
+        englishNumbers.add("Three");
+        englishNumbers.add("Four");
+        englishNumbers.add("Five");
+        englishNumbers.add("Six");
+        englishNumbers.add("Seven");
+        englishNumbers.add("Eight");
+        englishNumbers.add("Nine");
+        englishNumbers.add("Ten");
+        }
     }
 }
