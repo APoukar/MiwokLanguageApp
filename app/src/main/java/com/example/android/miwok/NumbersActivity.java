@@ -18,7 +18,9 @@ package com.example.android.miwok;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
+import android.widget.ArrayAdapter;
 import android.widget.LinearLayout;
+import android.widget.ListView;
 import android.widget.TextView;
 
 import java.util.ArrayList;
@@ -42,12 +44,10 @@ public class NumbersActivity extends AppCompatActivity {
         englishNumbers.add("Nine");
         englishNumbers.add("Ten");
 
-        LinearLayout rootView = (LinearLayout)findViewById(R.id.rootView);
-        for (int i = 0; i < englishNumbers.size(); i++) {
-            String textViewName = "textView" + i;
-            TextView numberTextView = new TextView(this);
-            numberTextView.setText(englishNumbers.get(i));
-            rootView.addView(numberTextView);
-        }
+        ArrayAdapter<String> itemsAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, englishNumbers);
+
+        ListView listView = (ListView) findViewById(R.id.list);
+
+        listView.setAdapter(itemsAdapter);
     }
 }
