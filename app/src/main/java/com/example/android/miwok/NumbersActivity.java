@@ -17,11 +17,7 @@ package com.example.android.miwok;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.Log;
-import android.widget.ArrayAdapter;
-import android.widget.LinearLayout;
 import android.widget.ListView;
-import android.widget.TextView;
 
 import java.util.ArrayList;
 
@@ -30,24 +26,24 @@ public class NumbersActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_numbers);
+        setContentView(R.layout.word_list);
 
-        ArrayList<Word> englishNumbers = new ArrayList<Word>();
-        englishNumbers.add(new Word("One", "lutti"));
-        englishNumbers.add(new Word("Two", "otiiko"));
-        englishNumbers.add(new Word("Three", "tolookosu"));
-        englishNumbers.add(new Word("Four", "oyyiisa"));
-        englishNumbers.add(new Word("Five", "massokka"));
-        englishNumbers.add(new Word("Six", "temmokka"));
-        englishNumbers.add(new Word("Seven", "kenekaku"));
-        englishNumbers.add(new Word("Eight", "kavinta"));
-        englishNumbers.add(new Word("Nine", "wo'e"));
-        englishNumbers.add(new Word("Ten", "na'aacha"));
+        ArrayList<Word> numbers = new ArrayList<Word>();
+        numbers.add(new Word("One", "lutti"));
+        numbers.add(new Word("Two", "otiiko"));
+        numbers.add(new Word("Three", "tolookosu"));
+        numbers.add(new Word("Four", "oyyiisa"));
+        numbers.add(new Word("Five", "massokka"));
+        numbers.add(new Word("Six", "temmokka"));
+        numbers.add(new Word("Seven", "kenekaku"));
+        numbers.add(new Word("Eight", "kavinta"));
+        numbers.add(new Word("Nine", "wo'e"));
+        numbers.add(new Word("Ten", "na'aacha"));
 
 
-        AndroidWordAdapter wordArrayAdapter = new AndroidWordAdapter(this, englishNumbers);
+        AndroidWordAdapter wordArrayAdapter = new AndroidWordAdapter(this, numbers);
 
-        ListView listView = (ListView) findViewById(R.id.activity_numbers);
+        ListView listView = (ListView) findViewById(R.id.word_list);
         listView.setAdapter(wordArrayAdapter);
     }
 }
