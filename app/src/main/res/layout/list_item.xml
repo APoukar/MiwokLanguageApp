@@ -9,8 +9,8 @@
 
     <ImageView
         android:id="@+id/word_image"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="88dp"
+        android:layout_height="88dp"
         android:src="@drawable/number_eight"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintTop_toTopOf="parent" />

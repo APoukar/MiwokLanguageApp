@@ -17,6 +17,8 @@ public class Word {
 
     private int mImage = NO_IMAGE_PROVIDED;
 
+    private int mPronunciation;
+
     private static final int NO_IMAGE_PROVIDED = -1;
 
     /**
@@ -27,15 +29,17 @@ public class Word {
      * @param miwokTranslation   is the word in the Miwok language
      */
 
-    public Word(String defaultTranslation, String miwokTranslation) {
+    public Word(String defaultTranslation, String miwokTranslation, int pronunciation) {
         mDefaultTranslation = defaultTranslation;
         mMiwokTranslation = miwokTranslation;
+        mPronunciation = pronunciation;
     }
 
-    public Word(String defaultTranslation, String miwokTranslation, int image) {
+    public Word(String defaultTranslation, String miwokTranslation, int image, int pronunciation) {
         mDefaultTranslation = defaultTranslation;
         mMiwokTranslation = miwokTranslation;
         mImage = image;
+        mPronunciation = pronunciation;
     }
 
     /**
@@ -58,5 +62,9 @@ public class Word {
 
     public boolean hasImage() {
         return mImage != NO_IMAGE_PROVIDED;
+    }
+
+    public int getPronunciation() {
+        return mPronunciation;
     }
 }
